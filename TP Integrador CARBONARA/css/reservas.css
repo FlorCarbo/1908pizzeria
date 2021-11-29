@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "Adamregular";
+  src: url(../fonts/Adam\ Fathony\ -\ Bignord\ Regular.otf);
+}
+@font-face {
+  font-family: "AdamBold";
+  src: url(../fonts/Akzidenz\ Grotesk\ CE\ Light\ Bold.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 65%;
+  box-sizing: border-box;
+}
+
+#marca{
+  height: 7%; 
+  width: 7%; 
+  float: left;
+  margin-top: 0.3% ;
+  margin-left: 1%;
+}
+
+h1{
+  font-size: 2rem;
+  float: left;
+  text-align: center;
+  margin-top: 1.5% ;
+}
+
+body{
+  color: black;
+  font-size: 4rem;
+  font-family: "AdamBold";
+  background-color: rgb(212, 47, 75);
+}
+
+p{
+  font-size: 1.5rem;
+}
+
+.navbar{
+  display: block; /*siempre va a ocupar toda la parte de arriba*/
+  background-color: rgb(228, 151, 9);
+  height: 7rem;
+  text-align: center;
+  font-family: "Adamregular";  
+  padding-top: 1.5%;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 5%;
+  font-size: 2rem;
+}
+
+.navbar a:hover{
+  color: black;
+  background-color: rgb(212, 47, 75);
+  font-size: 2rem;
+}
+
+
+.container{ /*para acomodar las secciones que cree abajo*/
+  padding: 1rem;
+  height: 55rem;
+  display: grid; /*para acomodar las secciones que cree abajo*/
+  grid-template-areas: "uno uno tres tres"
+                       "dos dos tres tres"
+                       "dos dos cuatro cuatro"
+                       "cinco cinco cinco cinco";
+  gap: 1%;
+  box-sizing: border-box;
+}
+
+h1, h2{
+  font-family: Adamregular;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.s1{ /*Area uno quienes somos*/
+  grid-area: uno ; 
+  font-size: 4rem;
+
+}
+
+.s2{ /*Area dos Foto cerveza*/
+  grid-area: dos ; 
+  font-size: 4rem;
+}
+
+.s3{ /*Area tres Foto Portada*/
+  grid-area: tres ; 
+}
+
+#img{
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+#boton{
+  background-color: white;
+  color: rgb(212, 47, 75);
+  font-size: 1.3rem;
+  padding: 0.8rem; 
+}
+
+
+
+.s4{ /*Area cuatro ubicacion*/
+  grid-area: cuatro ;
+  height: 25rem;
+  box-sizing: border-box;
+}
+
+.s5{ /*Area cinco footer*/
+  grid-area: cinco;
+}
+
+
+.footer{
+  display: block;
+  background-color: rgb(228, 151, 9);
+  height: 6rem;
+  text-align: right;
+  font-family: "Adamregular";  
+}
+
+#foot{
+  text-align: left;
+  font-family: "AdamBold";
+  font-size: small;
+  padding-left: 2%;
+  margin-top: -4%;
+  width: max-content;
+}
+
+.footer a{
+  font-size: 5rem;
+}
+
+.footer a:hover{
+  color: black;
+  background-color: rgb(212, 47, 75);
+  font-size: 5rem;
+}
+
+
+i{
+  font-family: "Adamregular";
+  padding-left: 5%;
+}
+
+#logoRS{
+  height: 5rem;
+  width: 5rem;
+}
+
+
+/*TABLET*/
+
+@media all and (min-width: 600px) and (max-width: 1023px){
+  .container{
+    grid-template-areas: "tres tres tres"
+                         "uno uno uno "
+                         "dos dos dos "
+                         "cuatro cuatro cuatro "
+                         "cinco cinco cinco"; 
+  }
+
+  #marca{
+    height:8%;
+    width: 8%;
+  }
+
+  a{
+    font-size: 2rem;
+  }
+
+  .navbar a:hover{
+    font-size: 2.5rem;
+  }
+
+}
+
+/*CELULARES*/
+@media all and (max-width: 599px){
+  .container{
+    grid-template-areas: "dos dos "
+                         "uno uno  "
+                         "tres tres "
+                         "cuatro cuatro "
+                         "cinco cinco"; 
+  }
+
+  #marca{
+    height:13%;
+    width: 13%;
+  }
+
+  .navbar{
+    height: 5rem;
+  }
+
+  h1{
+    font-size: 75%;
+    margin-top: 4.5% ;
+  }
+
+  .navbar a:hover{
+    font-size: 2rem;
+  }
+
+  a{
+    font-size: 150%;
+  }
+
+  #foot{
+    padding-left: 2%;
+    margin-top: -7%;
+    font-size: x-small;
+  }
+
+}

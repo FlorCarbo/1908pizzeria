@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reservas.css" />
+    <title>Reservas 1908 </title>
+    <link rel="shortcut icon" href="imagenes/birra.png"/> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+    <header>
+
+        <div>
+            <img id="marca" src="imagenes/1908logo.png" alt="Logo 1908 Pizza y Birra">       
+            <h1 class="animate__animated animate__bounceInLeft"> 1908 PIZZA & BIRRA </h1>
+        </div>
+
+        <nav class="navbar">
+            <div>
+                <a href="index.html"> Inicio </a>
+                <a href="menu.html"> Menu </a>
+                <a href="reservas.html"> Reservas </a>
+                <a href="contacto.html"> Contacto </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container">
+
+        <section class="s1">
+            <div>
+                <h2>Nuestros Horarios <span class="material-icons">  schedule </span></h2> <br>
+                <p> Abrimos de Martes a Domingos a partir de las 18 Hs hasta las 00 Hs.
+                    Los Lunes se encuentra cerrado.
+                </p> <br>
+            </div>
+
+            <div>
+                <h2> <span class="material-icons">  today </span> Reservas </h2> <br>
+                <p> Podes reservar para cenar en 1908 tanto adentro como afuera. 
+                    Los horarios para reservar son desde las 18 Hs hasta las 20.30 Hs
+                    Las reservas cuentan con 15 minutos de tolerancia donde deberán estar todos
+                    todos los comenzales. Luego de las 20.30 Hs no se aceptan reservas. 
+                </p><br>
+
+            </div>
+              
+        </section>
+
+        <section class="s2">     
+             <div>
+                <img id="img" src="imagenes/horno.jpeg" alt="Cerveza portada">
+            </div>
+
+        </section>
+
+        <section class="s3">
+            <h2>Hace tu reserva <span class="material-icons">  dashboard </span> </h2>    
+            <p> 
+                <br>
+                Para enviar una solicitud de reserva, completar el siguiente formulario.
+                Al enviar el formulario, 1908 estara revisando disponibilidad y quedara confirmada la misma
+                una vez que el cliente reciba la validacion de la reserva a traves de Whatsapp o al mail ingresado.
+                <br>
+            </p> 
+            
+            <div>
+           
+                <form id="form" action="" method="post" enctype="text/plain" >
+                    
+                    <br>    
+                    <p> Completa los datos para enviarnos tu reserva :</p> <br>
+                    <br>
+            
+                    <p align="center"> <span class="material-icons">  account_circle </span> Nombre:           
+                    <input autofocus id="nombre" type="text" name="nombre" size="40" required >
+                    <br> 
+
+                    Apellido:
+                    <input autofocus id="apellido" type="text" name="apellido" size="40" required>
+                    <br>
+
+                    Direccion de mail:         
+                    <input id= "mail" type="text" name="mail" size="40" required>
+                    <br>
+        
+                    Celular:      
+                    <input id="celular" type="text" name="tel" size="40" required >
+                    <br>
+                  
+                    Cantidad de Comenzales: <br>
+                        <input type="radio" id="comenzales" name="comenzales" > <label id="1" required>1</label>
+                        <input type="radio" id="comenzales" name="comenzales"> <label id="2">2</label>
+                        <input type="radio" id="comenzales" name="comenzales"> <label id="3">3</label><br>
+                        <input type="radio" id="comenzales" name="comenzales"> <label id="4">4</label>
+                        <input type="radio" id="comenzales" name="comenzales"> <label id="5">5</label>
+                        <input type="radio" id="comenzales" name="comenzales"> <label id="6">6</label> <br>
+                        <input type="radio" id="comenzales" name="comenzales"> <label id="7">7</label>
+                        <input type="radio" id="comenzales" name="comenzales"> <label id="8">8</label>
+                        <input type="radio" id="comenzales" name="comenzales"> <label id="9">9</label> 
+                    <br>
+
+                    Lugar: 
+                    <select id="lugar" name="lugar">
+                        <option value="">- Selecciona una opción -</option>
+                        <option value="1">Mesa adentro</option>
+                        <option value="2">Mesa afuera</option>
+                    </select>
+                    <br>
+            
+                    Seleccionar la Fecha: 
+                    <input type="datetime-local" id="fecha" name="fecha" required>
+                    <br>
+
+                    Si queres agregar algún comentario: <br> 
+                    <textarea id="comentarios" rows="5" cols="60" name="mensaje"></textarea>
+                    <br>
+            
+                    <input id="boton" type="submit" onclick="return enviarFormulario()" value="Enviar" >
+                    <input id="boton" type="reset" value="Borrar">               
+                    </p>
+                    
+                    <script src="validacion.js"> </script>      
+                         
+                </form>
+                
+            </div>
+
+        </section>
+
+        
+
+        <section class="s4">
+            <br>
+            <h2> Reseñas </h2> <br> <br>
+            <p align="center"> Podés ingresar en nuestras reseñas de Google ingresando desde las estrellas.
+                <a href="https://supple.live/hV458RiTjiUHJMxd7"> <span class="material-icons">  star star star star star_outline </span> 4.5 </a>
+                <br>  ¡Esperamos tu calificación y tus comentarios que nos ayudan a crecer!
+            </p>
+        </section>
+
+        <section class="s5">
+            <footer class="footer"> 
+                <a href="https://api.whatsapp.com/send/?phone=5491135942944&text&app_absent=0"><img id="logoRS"   src="imagenes/WP.png" alt="Whatsapp" ></a>
+                <a href="https://instagram.com/1908pizzaybirra/"><img id="logoRS"   src="imagenes/IGredondo.png" alt="Instagram" ></a>
+                <a href="https://instagram.com/1908pizzaybirra/"><img id="logoRS" src="imagenes/FB4.png" alt="Facebook"></a>
+                <p id="foot">2021, 1908 Pizza & Birra | Desarrollo Florencia Carbonara </p>
+            </footer>
+        </section>
+
+
+
+    </div>
+
+
+
+
+
+
+    
+</body>
+
+</html>

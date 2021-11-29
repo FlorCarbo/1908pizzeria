@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Adamregular";
+  src: url(../fonts/Adam\ Fathony\ -\ Bignord\ Regular.otf);
+}
+
+@font-face {
+  font-family: "AdamBold";
+  src: url(../fonts/Akzidenz\ Grotesk\ CE\ Light\ Bold.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 65%;
+  box-sizing: border-box;
+ 
+}
+
+#marca{
+  height: 7%;
+  width: 7%;
+  float: left;
+  margin-top: 0.3% ;
+  margin-left: 1%;
+}
+
+h1{
+  font-size: 2rem;
+  float: left;
+  text-align: center;
+  margin-top: 1.5% ;
+  font-family: "Adamregular";
+}
+
+.navbar{
+  display: block; /*siempre va a ocupar toda la parte de arriba*/
+  background-color: rgb(228, 151, 9);
+  height: 7rem;
+  text-align: center;
+  font-family: "Adamregular";  
+  padding-top: 1.5%;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 5%;
+  font-size: 2rem;
+}
+
+.navbar a:hover{
+  color: black;
+  background-color: rgb(212, 47, 75);
+  font-size: 2rem;
+}
+
+h2{
+  font-family: "Adamregular";
+  text-align: center;
+  font-size: 3rem;
+}
+
+h3{
+  font-family: "Adamregular";
+  font-size: 2rem;
+}
+
+p{
+  font-family: "AdamBold";
+  font-size: 1.5rem;
+  padding-right: 0.3rem;
+  padding-top: 0.3rem;
+}
+
+body{
+  background-color: rgb(212, 47, 75);
+  font-family: "AdamBold";
+}
+
+.grid-container{
+  width: 95vw; /*para poner un ancho y que entren siempre 3 cajas*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+  gap: 3rem; 
+  padding-left: 3rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+img{
+   border-radius: 1rem;
+  width: 100%;
+}
+
+.grid-item{
+  border: 1px solid rgb(228, 151, 9);
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem; 
+  display: grid;
+  grid-template-columns: 150px 1fr; 
+  gap: 0.5rem; 
+  box-sizing: border-box;
+
+ 
+}
+
+
+.footer{
+  display: block;
+  background-color: rgb(228, 151, 9);
+  height: 6rem;
+  text-align: right;
+  font-family: "Adamregular";  
+}
+
+#foot{
+  text-align: left;
+  font-family: "AdamBold";
+  font-size: small;
+  padding-left: 2%;
+  margin-top: -3%;
+  width: max-content;
+}
+
+.footer a:hover{
+  color: black;
+  background-color: rgb(212, 47, 75);
+  font-size: 3rem;
+}
+
+#logoRS{
+  height: 5rem;
+  width: 5rem;
+}
+
+/*TABLET*/
+
+@media all and (min-width: 600px) and (max-width: 1023px){
+  .container{
+    grid-template-areas: "uno uno uno uno"
+                         "tres tres tres tres"
+                         "dos dos dos dos"
+                         "cuatro cuatro cuatro cuatro"; 
+  }
+
+  #marca{
+    height: 9%;
+    width: 9%;
+  }
+
+  .grid-container{
+    gap: 2rem;
+  }
+
+  h3, p{
+    font-size: 1.6rem;
+  }
+
+}
+
+/*CELULARES*/
+@media all and (max-width: 599px){
+  .container{
+    grid-template-areas: "uno uno uno uno"
+                         "dos dos dos dos"
+                         "tres tres tres tres"
+                         "cuatro cuatro cuatro cuatro "; 
+  }
+
+  #marca{
+    height:15%;
+    width: 15%;
+  }
+
+  .navbar{
+    height: 5rem;
+  }
+
+  .grid-container{
+    gap: 1rem;
+  }
+
+  h1{
+    font-size: 1rem;
+    margin-top: 4.5% ;
+  }
+
+  a{
+    font-size: 1.5rem;
+  }
+
+  #foot{
+    padding-left: 2%;
+    margin-top: -5%;
+    font-size: x-small;
+  }
+
+}
